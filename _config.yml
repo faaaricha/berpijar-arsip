@@ -1,0 +1,57 @@
+# Site
+name: 'berpijar/arsip'
+description: 'Arsip dari Berpijar, website yang #BukanSekadarBeropini.'
+logo: 'assets/images/logo.png'
+favicon: 'assets/images/favicon.ico'
+baseurl: ''
+# disqus: false
+email: 'redaksi.berpijar@gmail.com'
+# mailchimp-list: 
+
+include: ["_pages"]
+permalink: /:title/
+
+# Plugins
+plugins: 
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-seo-tag
+  
+authors:
+    berpijar:
+      name:           Berpijar
+      site:           https://berpijar.github.io
+      avatar:         /assets/images/avatar1.jpg
+      bio:            "Arsip redaksi. Ini adalah situs pengarsipan. Situs ini hanya menampilkan artikel dan rujukan yang sebelumnya pernah tayang di Berpijar.co (yang kini tak lagi beroperasi)."
+      email:          redaksi.berpijar@gmail.com
+      twitter:        https://twitter.com/
+ 
+# Defaults
+defaults:
+
+  # all posts
+  - scope:
+      path: "_posts"
+    values:
+      layout: post
+      author: berpijar
+      avatar: /assets/images/avatar1.jpg
+      
+  # all pages
+  - scope:
+      path: "_pages"
+    values:
+      layout: page
+      
+# Syntax
+markdown: kramdown
+highlighter: rouge
+
+# Paginate
+paginate: 20
+
+
+
+# Exclude metadata and development time dependencies (like Grunt plugins)
+exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
